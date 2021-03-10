@@ -15,7 +15,7 @@ int main([[maybe_unused]]int argc, [[maybe_unused]]char **argv)
         std::cout << "Connected:" << ss.address().toString() << std::endl;
         str << "HTTP/10 200 OK\r\n"
             << "Content-type: text/html\r\n\r\n"
-            << "<html><head><title>My 1st Web Server</title></head><body>Hello world!</body></html>\r\n"
+            << "<html><head><title>My 1st Web Server</title></head><body><h1>Hello world!</h1></body></html>\r\n"
             << std::flush;
     }
 }
