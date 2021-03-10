@@ -6,14 +6,17 @@
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
-    Poco::Net::SocketAddress sa("www.ru", 80);
+    Poco::Net::SocketAddress sa("ptsv2.com", 80);
     Poco::Net::StreamSocket socket(sa);
+
     Poco::Net::SocketStream str(socket);
-    str << "GET / HTTP/1.1\r\n" <<
-           "Host: www.ya.ru\r\n" <<
+    str << "GET / HTTP/1.0\r\n" <<
+           "Host: ptsv2.com\r\n" <<
            "\r\n" <<
            "\r\n";
     str.flush();
+
     Poco::StreamCopier::copyStream(str, std::cout);
+
     return 0;
 }
