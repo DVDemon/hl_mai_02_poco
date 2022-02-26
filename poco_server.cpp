@@ -4,9 +4,9 @@
 #include <Poco/Net/SocketAddress.h>
 #include <iostream>
 
-int main([[maybe_unused]]int argc, [[maybe_unused]]char **argv)
+int main()
 {
-    Poco::Net::ServerSocket srv(8080); // does bind + listen
+    Poco::Net::ServerSocket srv(8080); 
     while (true)
     {
         

@@ -13,7 +13,7 @@ struct HelloThread :  Poco::Runnable
     }
 };
 
-int main([[maybe_unused]] int argc, [[maybe_unused]] char *argv[])
+int main()
 {
     Poco::Thread thread;
     HelloThread hello;
