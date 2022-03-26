@@ -17,6 +17,7 @@ int main()
             << "Content-type: text/html\r\n\r\n"
             << "<html><head><title>My 1st Web Server</title></head><body><h1>Hello world!</h1></body></html>\r\n"
             << std::flush;
+            
         str.flush();
     }
 }
