@@ -22,9 +22,9 @@ int main()
 
     try
     {
-            Poco::URI uri("https://yandex.ru/");
+            Poco::URI uri("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relativehumidity_2m,windspeed_10m");
             Poco::Net::HTTPSClientSession s(uri.getHost(), uri.getPort());
-            Poco::Net::HTTPRequest request(Poco::Net::HTTPRequest::HTTP_GET, uri.getPath());
+            Poco::Net::HTTPRequest request(Poco::Net::HTTPRequest::HTTP_GET, uri.toString()); 
             request.set("user-agent", "Poco HTTPSClientSession");
             s.sendRequest(request);
             Poco::Net::HTTPResponse response;
