@@ -6,8 +6,8 @@
 
 int main()
 {
-    Poco::Net::SocketAddress sa("yandex.ru", 80);
-    //Poco::Net::SocketAddress sa("localhost", 8080);
+    //Poco::Net::SocketAddress sa("yandex.ru", 80);
+    Poco::Net::SocketAddress sa("localhost", 8080);
     Poco::Net::StreamSocket socket(sa);
     Poco::Net::SocketStream str(socket);
 
